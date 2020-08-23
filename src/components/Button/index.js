@@ -1,28 +1,27 @@
 import React from 'react';
 import styles from './styles.module.sass';
 
-function Button({text, type}) {
-
-  function stylePick() {
-    switch (type) {
-      case "edit": {
-        return styles.edit
-      }
-      case "delete": {
-        return styles.delete
-      }
-      case "create": {
-        return styles.edit
-      }
-      case "back": {
-        return styles.back
-      }
+function stylePick(type) {
+  switch (type) {
+    case "edit": {
+      return styles.edit
     }
+    case "delete": {
+      return styles.delete
+    }
+    case "create": {
+      return styles.edit
+    }
+    case "back": {
+      return styles.back
+    }
+    default:
+      return styles.edit
   }
+}
 
-  return (
-    <button className={stylePick()}>{text}</button>
-  );
+function Button({text, type, onClick}) {
+  return <button className={stylePick(type)}>{text}</button>;
 }
 
 export default Button;
