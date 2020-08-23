@@ -16,7 +16,7 @@ function stylePick(type) {
       return styles.back
     }
     default:
-      return styles.edit
+      return;
   }
 }
 

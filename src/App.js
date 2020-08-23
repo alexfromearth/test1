@@ -1,16 +1,22 @@
 import React from 'react';
-import Button from "./components/Button";
 import TaskTable from "./components/TaskTable";
-import {BrowserRouter as Router} from 'react-router-dom';
+import  {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from "react-redux";
 import store from "./redux/store";
+import TaskPage from "./components/TaskTable/TableCell/TaskPage";
 
 function App() {
   return (
     <Router>
       <Provider store={store}>
-        {/*<Button text="Удалить" type="delete"/>*/}
-        <TaskTable/>
+        <Switch>
+          <Route exact path="/tasks/:id">
+            <TaskPage />
+          </Route>
+          <Route exact path="/">
+            <TaskTable/>
+          </Route>
+        </Switch>
       </Provider>
     </Router>
   );

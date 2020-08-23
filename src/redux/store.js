@@ -4,7 +4,7 @@ import {composeWithDevTools} from "redux-devtools-extension/index";
 import createSagaMiddleware from 'redux-saga'
 import {all} from "redux-saga/effects";
 import editTaskWatcher from "./sagas/editSaga";
-import createTaskWatcher from "./sagas/CreateSaga";
+import createTaskWatcher from "./sagas/createSaga";
 import deleteTaskWatcher from "./sagas/deleteSaga";
 import getTaskListWatcher from "./sagas/getTaskList";
 

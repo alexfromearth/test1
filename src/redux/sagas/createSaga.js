@@ -1,6 +1,6 @@
 import { call, put, takeEvery } from "redux-saga/effects";
 import actionTypes from "../actionTypes/actionTypes";
-import {getListSC, setError, setIsFetching, setTaskList} from "../actionCreators/actionCreators";
+import {getListSC, setError, setIsFetching} from "../actionCreators/actionCreators";
 import API from "../../api";
 
 

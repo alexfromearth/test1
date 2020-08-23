@@ -15,13 +15,13 @@ class taskAPI{
 
   async editTaks(id, title) {
     const response = await axios.post(`https://test.megapolis-it.ru/api/list/${id}`, {title});
-      return response;
+      return response.data;
 
   }
 
   async deleteTask(id) {
     const response = await axios.delete(`https://test.megapolis-it.ru/api/list/${id}`)
-    return response;
+    return response.data;
   }
 
 }
