@@ -6,8 +6,8 @@ import styles from './styles.module.sass'
 function Task({task}) {
   return (
     <tr>
-      <td className={styles.backCols}>Задача №1</td>
-      <td>Описание</td>
+      <td className={styles.backCols}>Задача №{task.index + 1}</td>
+      <td>{task.title}</td>
       <td className={styles.backCols}>
         <a><FontAwesomeIcon icon={faPenSquare}/></a>
         <a><FontAwesomeIcon icon={faTrash}/></a>

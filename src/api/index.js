@@ -1,16 +1,15 @@
-
-
+import * as axios from "axios";
 
 
 class taskAPI{
   async getTasks() {
     const response = await axios.get('https://test.megapolis-it.ru/api/list');
-    return response;
+    return response.data.data;
   }
 
   async createTask(title) {
     const response = await axios.post('https://test.megapolis-it.ru/api/list', {title});
-    return response;
+    return response.data;
 
   }
 

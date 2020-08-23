@@ -21,7 +21,7 @@ function stylePick(type) {
 }
 
 function Button({text, type, onClick}) {
-  return <button className={stylePick(type)}>{text}</button>;
+  return <button className={stylePick(type)} onClick={onClick}>{text}</button>;
 }
 
 export default Button;
